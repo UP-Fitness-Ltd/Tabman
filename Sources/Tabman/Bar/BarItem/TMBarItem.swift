@@ -40,7 +40,10 @@ public protocol TMBarItemable: AnyObject {
 
     /// A brief description of the result of performing an action on the accessibility element, in a localized string.
     var accessibilityHint: String? { get set }
-    
+
+    /// A brief description of the result of performing an action on the accessibility element, in a localized string.
+    var accessibilityIdentifier: String? { get set }
+
     /// Inform the bar that the item has been updated.
     ///
     /// This will notify any button that is responsible for the item
@@ -116,6 +119,12 @@ open class TMBarItem: TMBarItemable {
         didSet {
             setNeedsUpdate()
         }
+    }
+
+    public var accessibilityIdentifier: String? {
+      didSet {
+        setNeedsUpdate()
+      }
     }
 
     public var isAccessibilityElement: Bool { return true }

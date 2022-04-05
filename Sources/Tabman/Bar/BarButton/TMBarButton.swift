@@ -107,6 +107,7 @@ open class TMBarButton: UIControl {
 
         accessibilityLabel = item.accessibilityLabel ?? item.title
         accessibilityHint = item.accessibilityHint
+        accessibilityIdentifier = item.accessibilityIdentifier
         accessibilityTraits = [.button]
         isAccessibilityElement = true
     }

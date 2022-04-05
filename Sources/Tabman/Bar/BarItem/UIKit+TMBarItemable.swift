@@ -33,6 +33,14 @@ extension UINavigationItem: TMBarItemable {
         }
         set {}
     }
+
+    public var accessibilityIdentifier: String? {
+      get {
+        return nil
+      }
+      set {}
+    }
+
 }
 
 /// :nodoc:
